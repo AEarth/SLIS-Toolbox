@@ -1,0 +1,33 @@
+   RoadcalloutSym = os.path.join(SymbologyFolder, "RoadCallout.lyrx")
+
+    params[1].symbology = RoadcalloutSym
+
+
+depth_raster = gdb_fname("depthraster")
+  arcpy.management.ApplySymbologyFromLayer(depth_raster_lyr, symbol_fpath("DepthRaster"))
+
+floodextent = gdb_fname("floodextent")
+arcpy.management.ApplySymbologyFromLayer(floodextent_lyr, symbol_fpath("FloodExtent"))
+
+
+dampoint_file = gdb_fname("DamPoint"
+arcpy.management.ApplySymbologyFromLayer(dampointlyr, r"Templates\DamPoint", None, "DEFAULT")
+
+
+trace_route_file = gdb_fname("NHDTRACE_RTE")
+arcpy.management.ApplySymbologyFromLayer(trace_route_lyr,symbol_fpath("NHDTRACE_RTE"), None, "DEFAULT")
+
+
+grid_index_file = gdb_fname("GridIndex")
+arcpy.management.ApplySymbologyFromLayer(grid_index_lyr, symbol_fpath("GridIndex"), None, "DEFAULT")
+
+
+buildingfc = gdb_fname("Structures")
+arcpy.management.ApplySymbologyFromLayer(buildingfc, symbol_fpath("Structures"), None, "DEFAULT")
+
+
+roadX_file = gdb_fname("RoadX")
+arcpy.management.ApplySymbologyFromLayer(roadX_lyr, symbol_fpath("RoadX"))
+
+roadcallout_file = gdb_fname("Roadcallout")
+arcpy.management.ApplySymbologyFromLayer(roadcallout_lyr, symbol_fpath("RoadCallout"))
